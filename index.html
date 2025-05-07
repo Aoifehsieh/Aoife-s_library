@@ -1,11 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>title here</title>
-  <link rel="stylesheet" href="./styles.css">
-<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .portfolio-scroll {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 10px; /* Space for scrollbar */
+        }
+
+        .portfolio-item {
+            display: inline-block;
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            background-color: #eee;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            vertical-align: top; /* Align items to the top */
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .portfolio-item {
+                width: 80%; /* Adjust width for smaller screens */
+                margin: 10px auto; /* Center items */
+                display: block; /* Stack items */
+            }
+        }
+    </style>
+</head>
 <body>
+
+    <div class="container">
+        <h1>Artist Portfolio</h1>
+        <p style="text-align: center;">Welcome to my portfolio! Scroll horizontally to view my artwork.</p>
+
+        <div class="portfolio-scroll">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Artwork 1">
+                <h3>Artwork Title 1</h3>
+                <p>Description of artwork 1.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Artwork 2">
+                <h3>Artwork Title 2</h3>
+                <p>Description of artwork 2.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Artwork 3">
+                <h3>Artwork Title 3</h3>
+                <p>Description of artwork 3.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Artwork 4">
+                <h3>Artwork Title 4</h3>
+                <p>Description of artwork 4.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Artwork 5">
+                <h3>Artwork Title 5</h3>
+                <p>Description of artwork 5.</p>
+            </div>
+            <!-- Add more portfolio items here -->
+        </div>
+    </div>
+
 </body>
 </html>
