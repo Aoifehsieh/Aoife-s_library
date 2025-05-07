@@ -6,41 +6,47 @@
     <title>Artist Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', monospace;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0e6d2;
+            color: #333;
+            overflow-x: auto; /* Enable horizontal scroll on the body */
+            white-space: nowrap; /* Prevent items from wrapping */
         }
 
         .container {
-            max-width: 1200px;
-            margin: 20px auto;
+            display: inline-block; /* Make container inline to allow horizontal scroll */
+            width: auto; /* Adjust width based on content */
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fffaf0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid #b8860b;
+            position: relative;
+            margin-right: 20px; /* Add spacing between containers */
         }
 
         h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        .portfolio-scroll {
-            overflow-x: auto;
+            position: absolute;
+            top: 50%;
+            right: -1.5em;
+            transform: translateY(-50%) rotate(90deg);
+            color: #8b4513;
+            font-size: 2em;
             white-space: nowrap;
-            padding-bottom: 10px; /* Space for scrollbar */
         }
 
         .portfolio-item {
             display: inline-block;
-            width: 300px;
+            width: 400px;
             margin: 10px;
             padding: 15px;
-            background-color: #eee;
-            border: 1px solid #ddd;
+            background-color: #f5f5dc;
+            border: 1px solid #d2b48c;
             border-radius: 5px;
             text-align: center;
-            vertical-align: top; /* Align items to the top */
+            vertical-align: top;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
         }
 
         .portfolio-item img {
@@ -48,18 +54,29 @@
             height: auto;
             border-radius: 5px;
             margin-bottom: 10px;
+            border: 1px solid #d2b48c;
+        }
+
+        .portfolio-item h3 {
+            color: #8b4513;
         }
 
         /* Responsive adjustments */
         @media (max-width: 600px) {
             .container {
                 padding: 10px;
+                margin-right: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                right: -1em;
             }
 
             .portfolio-item {
-                width: 80%; /* Adjust width for smaller screens */
-                margin: 10px auto; /* Center items */
-                display: block; /* Stack items */
+                width: 90%;
+                margin: 10px auto;
+                display: block;
             }
         }
     </style>
@@ -68,37 +85,50 @@
 
     <div class="container">
         <h1>Artist Portfolio</h1>
-        <p style="text-align: center;">Welcome to my portfolio! Scroll horizontally to view my artwork.</p>
-
-        <div class="portfolio-scroll">
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300x200" alt="Artwork 1">
-                <h3>Artwork Title 1</h3>
-                <p>Description of artwork 1.</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300x200" alt="Artwork 2">
-                <h3>Artwork Title 2</h3>
-                <p>Description of artwork 2.</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300x200" alt="Artwork 3">
-                <h3>Artwork Title 3</h3>
-                <p>Description of artwork 3.</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300x200" alt="Artwork 4">
-                <h3>Artwork Title 4</h3>
-                <p>Description of artwork 4.</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300x200" alt="Artwork 5">
-                <h3>Artwork Title 5</h3>
-                <p>Description of artwork 5.</p>
-            </div>
-            <!-- Add more portfolio items here -->
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Artwork 1">
+            <h3>Artwork Title 1</h3>
+            <p>Description of artwork 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </div>
+
+    <div class="container">
+        <h1>Artist Portfolio</h1>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Artwork 2">
+            <h3>Artwork Title 2</h3>
+            <p>Description of artwork 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Artist Portfolio</h1>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Artwork 3">
+            <h3>Artwork Title 3</h3>
+            <p>Description of artwork 3. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Artist Portfolio</h1>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Artwork 4">
+            <h3>Artwork Title 4</h3>
+            <p>Description of artwork 4. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Artist Portfolio</h1>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Artwork 5">
+            <h3>Artwork Title 5</h3>
+            <p>Description of artwork 5. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+        </div>
+    </div>
+
+    <!-- Add more containers here -->
 
 </body>
 </html>
