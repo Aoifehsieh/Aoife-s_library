@@ -11,42 +11,50 @@
             padding: 0;
             background-color: #f0e6d2;
             color: #333;
-            overflow-x: auto; /* Enable horizontal scroll on the body */
-            white-space: nowrap; /* Prevent items from wrapping */
+            overflow-x: auto;
+            white-space: nowrap;
         }
 
         .container {
-            display: inline-block; /* Make container inline to allow horizontal scroll */
-            width: auto; /* Adjust width based on content */
+            display: inline-block;
+            width: 600px;
             padding: 20px;
             background-color: #fffaf0;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             border: 2px solid #b8860b;
             position: relative;
-            margin-right: 20px; /* Add spacing between containers */
+            margin-right: 0.5em;
+            margin-left: 0.5em;
+            vertical-align: top;
+            box-sizing: border-box;
         }
 
         h1 {
             position: absolute;
             top: 50%;
-            right: -1.5em;
+            right: 10px;
             transform: translateY(-50%) rotate(90deg);
             color: #8b4513;
-            font-size: 2em;
-            white-space: nowrap;
+            font-size: 1.7em; /* Reduced title font size */
+            white-space: normal;
+            width: auto;
+            text-align: right;
+            max-height: 90%; /* Limit title height to 90% of container */
+            overflow: hidden; /* Hide overflowing title text */
+            text-overflow: ellipsis; /* Add ellipsis if the title overflows */
         }
 
         .portfolio-item {
-            display: inline-block;
-            width: 400px;
-            margin: 10px;
+            width: 100%;
+            margin: 10px 0;
             padding: 15px;
             background-color: #f5f5dc;
             border: 1px solid #d2b48c;
             border-radius: 5px;
             text-align: center;
-            vertical-align: top;
+            display: block;
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
         }
 
         .portfolio-item img {
@@ -57,6 +65,16 @@
             border: 1px solid #d2b48c;
         }
 
+        .portfolio-item p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: 95%;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         .portfolio-item h3 {
             color: #8b4513;
         }
@@ -64,19 +82,13 @@
         /* Responsive adjustments */
         @media (max-width: 600px) {
             .container {
-                padding: 10px;
+                width: 90%;
                 margin-right: 10px;
             }
 
             h1 {
-                font-size: 1.5em;
-                right: -1em;
-            }
-
-            .portfolio-item {
-                width: 90%;
-                margin: 10px auto;
-                display: block;
+                font-size: 1.3em;
+                right: 5px;
             }
         }
     </style>
@@ -88,7 +100,7 @@
         <div class="portfolio-item">
             <img src="https://via.placeholder.com/400x300" alt="Artwork 1">
             <h3>Artwork Title 1</h3>
-            <p>Description of artwork 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Description of artwork 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. This description is longer to demonstrate text wrapping within the container. This is a very very very very very very very very very very long word to test the word-wrap and overflow-wrap properties. Adding even more text to see if it overflows after the font size reduction. And even more, just to be absolutely sure.</p>
         </div>
     </div>
 
@@ -96,8 +108,8 @@
         <h1>Artist Portfolio</h1>
         <div class="portfolio-item">
             <img src="https://via.placeholder.com/400x300" alt="Artwork 2">
-            <h3>Artwork Title 2</h3>
-            <p>Description of artwork 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h3>Artwork Title 2</h1>
+            <p>Description of artwork 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. This description is longer to demonstrate text wrapping within the container. This is a very very very very very very very very very very long word to test the word-wrap and overflow-wrap properties. Adding even more text to see if it overflows after the font size reduction. And even more, just to be absolutely sure.</p>
         </div>
     </div>
 
@@ -106,7 +118,7 @@
         <div class="portfolio-item">
             <img src="https://via.placeholder.com/400x300" alt="Artwork 3">
             <h3>Artwork Title 3</h3>
-            <p>Description of artwork 3. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p>Description of artwork 3. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. This description is longer to demonstrate text wrapping within the container. This is a very very very very very very very very very very long word to test the word-wrap and overflow-wrap properties. Adding even more text to see if it overflows after the font size reduction. And even more, just to be absolutely sure.</p>
         </div>
     </div>
 
@@ -115,7 +127,7 @@
         <div class="portfolio-item">
             <img src="https://via.placeholder.com/400x300" alt="Artwork 4">
             <h3>Artwork Title 4</h3>
-            <p>Description of artwork 4. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            <p>Description of artwork 4. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. This description is longer to demonstrate text wrapping within the container. This is a very very very very very very very very very very long word to test the word-wrap and overflow-wrap properties. Adding even more text to see if it overflows after the font size reduction. And even more, just to be absolutely sure.</p>
         </div>
     </div>
 
@@ -124,7 +136,7 @@
         <div class="portfolio-item">
             <img src="https://via.placeholder.com/400x300" alt="Artwork 5">
             <h3>Artwork Title 5</h3>
-            <p>Description of artwork 5. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            <p>Description of artwork 5. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. This description is longer to demonstrate text wrapping within the container. This is a very very very very very very very very very very long word to test the word-wrap and overflow-wrap properties. Adding even more text to see if it overflows after the font size reduction. And even more, just to be absolutely sure.</p>
         </div>
     </div>
 
